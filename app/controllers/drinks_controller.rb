@@ -31,4 +31,3 @@ class DrinksController < ApplicationController
 	def drink_params
 		params.require(:drink).permit(:name, :directions, :picture)
 	end
-end
