@@ -1,0 +1,16 @@
+
+<div class ="row">
+    <% @drinks.each do |drink| %>
+    <div class="container-fluid">
+
+        <div class="col-md-4"><%= drink.picture %></div>
+
+        <div class="col-md-8">
+            <h3><%= drink.name %> | <%= drink.user.email %></h3>
+            <p><%= drink.directions %></p>
+        </div>
+        
+    </div>
+
+   <% end %>
+</div>
