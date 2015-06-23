@@ -21,14 +21,16 @@ $(function(){
 			url: "/drinks",
 			dataType: "JSON",
 			data: {
-				name: drink_name,
-				directions: directions,
-				picture: picture
+				drink: {
+					name: drink_name,
+					directions: directions,
+					picture: picture
+				}
 			},
 
 			success: function(data, textStatus, jqXHR){
 
-				var html = "<li>"+drink_name+"</li>"+"<li>"+drink_directions+"</li>"+"<li>"+drink_picture+"</li>";
+				var html = "<li>"+drink_name+"</li>"+"<li>"+directions+"</li>"+"<li>"+picture+"</li>";
 				$("#results").prepend(html);
 
 			},
