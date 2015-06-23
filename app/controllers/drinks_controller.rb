@@ -11,6 +11,7 @@ class DrinksController < ApplicationController
 			render :json => @drink
 		else 
 			render :json => { :errors => @drink.errors.full_messages}, :status => 422
+		end
 	end
 	
 	def show
@@ -31,3 +32,4 @@ class DrinksController < ApplicationController
 	def drink_params
 		params.require(:drink).permit(:name, :directions, :picture)
 	end
+end
