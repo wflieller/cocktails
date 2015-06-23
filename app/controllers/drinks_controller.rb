@@ -1,4 +1,5 @@
 class DrinksController < ApplicationController
+	before_action :require_login, :only => :create
 	
 	def index
 		@drinks = Drink.all

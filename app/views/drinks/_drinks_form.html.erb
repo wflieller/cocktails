@@ -1,0 +1,24 @@
+<form class="new_drink" id="new_drink" action="/drinks" accept-charset="UTF-8" method="post">
+
+  <div class="field">
+    <label for="drink_name">Name</label><br>
+    <input type="text" name="drink[name]" id="drink_name">
+  </div>
+
+  <div class="field">
+    <label for="drink_directions">Directions</label><br>
+    <textarea name="drink[directions]" id="drink_directions"></textarea>
+  </div>
+
+  <div class="field">
+    <label for="drink_picture">Picture</label><br>
+    <input type="text" name="drink[picture]" id="drink_picture">
+  </div>
+
+
+    <div class="actions">
+    <input type="submit" name="commit" value="Create Drink">
+  </div>
+</form>
+
+<ul id= "results"> </ul>
