@@ -1,22 +1,25 @@
 <!-- This partial view is rendered on index.html.erb -->
 
-	<!-- for each drink in the index of all drinks -->
+<!-- for each drink in the index of all drinks -->
 <% @drinks.each do |drink| %>
-	
-	<div class ="row">
+
+	<div class = "row col-md-12">
+		<div class="container ">
 	    <!-- render a container that contains info we want to display for each drink record -->
-	    <div class="container-fluid">
+		   
 	    	<!-- 1/3 of the view rendered a picture of that drink given bootstrap class .col-md-4  -->
 	        <div class="col-md-4">
-	        	<%= drink.picture %>
+	        	<img src="<%= drink.picture %>">
 	        </div>
 	        <!-- 2/3rds of the view renderd is a parigraph with drink making directions -->
 	        <div class="col-md-8">
 	        	<!-- drink name and user email set above the drink directions -->
 	            <h3><%= drink.name %> | <%= drink.user.email %></h3>
 	            <p><%= drink.directions %></p>
+
 	        </div>
-	    <!-- Main problem is that we did not test this, however I think with another 10-20 minutes and some data in our tables Alwan and I could have dressed this list of all drinks up right! -->  
-	    </div>
-	   <% end %>
+		    <!-- Main problem is that we did not test this, however I think with another 10-20 minutes and some data in our tables Alwan and I could have dressed this list of all drinks up right! -->  
+	   		
+	   	</div>
 	</div>
+<% end %>
